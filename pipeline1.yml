@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+      - master
+pool:
+  vmImage: ubuntu-latest
+jobs:
+  - job: 'Agent Job'
+    displayName: 'Build Job'
+    steps:
+      - script: echo "Hello World!"
+        displayName: 'Run one line script'

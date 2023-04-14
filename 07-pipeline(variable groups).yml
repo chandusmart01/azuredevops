@@ -1,0 +1,14 @@
+name: name
+trigger: 
+  branches:
+    include:
+      - master
+pool:
+  name: Default
+variables:
+  - group: my-variable-group
+  - name: passed-variables
+    value: $[variables.myvariable]
+
+steps:
+  - script: echo $(passed-variables)
